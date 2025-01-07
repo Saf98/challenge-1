@@ -1,5 +1,6 @@
-// 
+const FizzBuzz = require('./../src/index.js');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(1+2)).toBe(3);
+test('Return new Array', () => {
+  const arr = [1, 2, "Fizz", 4, "Buzz", "Fizz",7, 8, "Fizz", "Buzz", 11, "Fizz", 13, 14, "FizzBuzz"];
+  expect(FizzBuzz()).toStrictEqual(arr);
 });
