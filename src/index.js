@@ -29,3 +29,20 @@ function FizzBuzz(num) {
 };
 
 module.exports = FizzBuzz;
+
+// For this challenge, you need to write a function that:
+
+// Takes a number of minutes as input
+// Returns a string that converts it into hours and minutes
+// Handles edge cases appropriately
+function Format(num) {
+    const hours = (num / 60);
+    const roundedHours = Math.floor(hours);
+    if (roundedHours === 0) {
+        console.log('true')
+    }
+   
+}
+
+Format(30)
+// module.exports = Format;
