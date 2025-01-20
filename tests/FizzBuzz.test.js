@@ -1,4 +1,4 @@
-const FizzBuzz = require('./../src/FizzBuzz.js');
+const FizzBuzz = require('../src/FizzBuzz.js');
 
 describe('FizzBuzz', () => {
   test('Return length 5 Array', () => {

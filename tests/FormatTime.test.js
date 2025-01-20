@@ -1,4 +1,4 @@
-const FormatTime = require('./../src/FormatTime.js');
+const FormatTime = require('../src/FormatTime.js');
 
 describe('FormatTime', () => {
     it('should be 45m', () => {
