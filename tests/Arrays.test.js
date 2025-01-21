@@ -1,29 +1,44 @@
-const findDuplicates = require('../src/Arrays.js');
-const removeDuplicates = require('../src/Arrays.js');
+const { findDuplicates, removeDuplicates, countOccurrences } = require('../src/Arrays.js');
 
 
 describe('duplicates', () => {
+  let arr;
+  let mixedArr;
+
+  beforeEach(() => {
+    arr = [1, 2, 3, 2, 4, 1];
+  });
+
+  beforeEach(() => {
+    mixedArr = ["a", 2, 3, "a", "b", 3];
+  });
+
   it('Return duplicates in an Array', () => {
-    const arr = [1, 2, 3, 2, 4, 1];
     const duplicateArray = [2, 1];
     expect(findDuplicates(arr)).toEqual(expect.arrayContaining(duplicateArray));
   });
 
   it('Remove duplicates in an Array', () => {
-    const arr = [1, 2, 3, 2, 4, 1];
     const singleArray = [1, 2, 3, 4];
     expect(removeDuplicates(arr)).toEqual(expect.arrayContaining(singleArray));
   });
 
   it('Return mixed duplicates in an Array', () => {
-    const arr = ["a", 2, 3, "a", "b", 3];
+  
     const duplicateArray = ["a", 3];
-    expect(findDuplicates(arr)).toEqual(expect.arrayContaining(duplicateArray));
+    expect(findDuplicates(mixedArr)).toEqual(expect.arrayContaining(duplicateArray));
   });
 
   it('Remove mixed duplicates in an Array', () => {
-    const arr = ["a", 2, 3, "a", "b", 3];
     const singleArray = ["a", 2, 3, "b"];
-    expect(removeDuplicates(arr)).toEqual(expect.arrayContaining(singleArray));
+    expect(removeDuplicates(mixedArr)).toEqual(expect.arrayContaining(singleArray));
+  });
+
+  it('Counts occurences in an Array', () => {
+    expect(countOccurrences(arr)).toEqual({"1": 2, "2": 2, "3": 1, "4": 1});
+  });
+
+  it('Count single item occurences in an Array', () => {
+    expect(countOccurrences([1])).toEqual({"1": 1});
   });
 });

@@ -1,21 +1,32 @@
 function findDuplicates(arr) {
+    const clonedArr = [...arr]
 
-const duplicateArray = arr.filter((element, index) => {
-    return arr.indexOf(element) !== index;
-});
+    const duplicateArray = clonedArr.filter((element, index) => {
+        return clonedArr.indexOf(element) !== index;
+    });
 
-return duplicateArray;
+    return duplicateArray;
 }
 
-module.exports = findDuplicates;
 
 function removeDuplicates(arr) {
+    const clonedArr = [...arr]
 
-const removeDuplicatesArray = arr.filter((element, index) => {
-    return arr.indexOf(element) === index;
-});
+    const removeDuplicatesArray = clonedArr.filter((element, index) => {
+        return clonedArr.indexOf(element) === index;
+    });
 
-return removeDuplicatesArray;
+    return removeDuplicatesArray;
 }
 
-module.exports = removeDuplicates;
+
+function countOccurrences(arr) {
+    const clonedArr = [...arr]
+
+    return clonedArr.reduce((acc, curr) => {
+        acc[curr] = (acc[curr] || 0) + 1;
+        return acc;
+    }, {});
+}
+
+module.exports = { findDuplicates, removeDuplicates, countOccurrences }
