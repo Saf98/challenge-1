@@ -10,7 +10,7 @@ function FizzBuzz(num) {
     const transformed = arr?.map((element, index) => {
         const isDivThree = element % 3 === 0 ;
         const isDivFive = element % 5 === 0;
-         if (isDivThree && isDivFive) {
+        if (isDivThree && isDivFive) {
             return arr[index] = Fizz+Buzz;
         }
 
