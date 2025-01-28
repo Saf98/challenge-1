@@ -1,15 +1,15 @@
 const { reverseString } = require('../src/StringReverser.js');
 
 
-describe('duplicates', () => {
-  let arr;
+describe('reverse single string', () => {
+  let str;
   beforeEach(() => {
-    arr = [1, 2, 3, 2, 4, 1];
+    str = "hello";
   });
 
-  it('Return duplicates in an Array', () => {
-    const revString = [2, 1];
-    expect(reverseString(arr)).toEqual(expect.arrayContaining(revString));
+  it('Reverse String', () => {
+    const revString = "olleh";
+    expect(reverseString(str)).toEqual(expect.arrayContaining(revString));
   });
 
 });
