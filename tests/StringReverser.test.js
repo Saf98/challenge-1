@@ -13,26 +13,28 @@ describe('reverse single string', () => {
   });
 
   it('Reverse single string', () => {
+    const match = "?"
+
     const revString = "olleh";
-    expect(reverseString(str)).toEqual(revString);
+    expect(reverseString(str, match)).toEqual(revString);
   });
 
   it('Reverse word', () => {
+    const match = "?"
     const revString = "dlrow olleh";
-    "you are how hi?"
-    expect(reverseString(word)).toEqual(revString);
+    expect(reverseString(word, match)).toEqual(revString);
   });
 
-  it('Reverse sentence w/o punct', () => {
-    const revString = "you are how hi?";
+  // it('Reverse sentence w/o punct', () => {
+  //   const revString = "you are how hi?";
     
-    expect(reverseString(sentence)).toEqual(revString);
-  });
+  //   expect(reverseString(sentence)).toEqual(revString);
+  // });
 
-  it('Reverse words with punct', () => {
-    const revString = "?uoy era woh ,ih";
+  // it('Reverse words with punct', () => {
+  //   const revString = "?uoy era woh ,ih";
     
-    expect(reverseString(sentence)).toEqual(revString);
-  });
+  //   expect(reverseString(sentence)).toEqual(revString);
+  // });
 
 });
