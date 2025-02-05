@@ -1,25 +1,33 @@
-function reverseString(txt, match) {
-  let text = txt;
-  let arr = [];
+function reverseString(str) {
+  const matchStrings = /[a-z]/gi;
 
-  if (txt.indexOf(match) === -1 || !match) {
-    return txt.split("").reverse().join("");
-  }
+  let letters = [];//array for letters
+  let chars = [];//array for other charactors
 
-  for (let i = 0; i < text.length; i++) {
-
-    if (text[i] === match) {
-      arr.reverse().push(match)
-
-      continue;
+  for(let i = 0; i < str.length; i++){
+    
+    if(str[i].match(matchStrings)){
+      //check regex for letters and push to array
+      letters.push(str[i])
+    } else {
+      //else add non-matching chars
+      chars[i] = str[i];
     }
-
-    arr.push(text[i].split(""));
   }
 
- return arr.join("");
+  for(var j = 0; j <str.length; j++){
+    
+    if(chars[j] === undefined){
+    
+      chars[j] = letters[letters.length - 1];
+      letters.pop();
+      //reverses position of letters
+    }
+  }
+
+  let revStr = chars.join('');
+  return revStr;
 }
 
 
-
-module.exports = {reverseString};
+module.exports = { reverseString };

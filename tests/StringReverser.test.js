@@ -25,16 +25,16 @@ describe('reverse single string', () => {
     expect(reverseString(word, match)).toEqual(revString);
   });
 
-  // it('Reverse sentence w/o punct', () => {
-  //   const revString = "you are how hi?";
+  it('Reverse sentence w/o punct', () => {
+    const revString = "you are how hi?";
     
-  //   expect(reverseString(sentence)).toEqual(revString);
-  // });
+    expect(reverseString(sentence)).toEqual(revString);
+  });
 
-  // it('Reverse words with punct', () => {
-  //   const revString = "?uoy era woh ,ih";
+  it('Reverse words with punct', () => {
+    const revString = "?uoy era woh ,ih";
     
-  //   expect(reverseString(sentence)).toEqual(revString);
-  // });
+    expect(reverseString(sentence)).toEqual(revString);
+  });
 
 });
